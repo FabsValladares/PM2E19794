@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="PM2Examen.Views.VerMapa">
+
+
+
+
+
+    <ContentPage.Content>
+        <StackLayout >
+            <maps:Map HorizontalOptions="FillAndExpand"
+                      VerticalOptions="FillAndExpand" x:Name="mapa" IsShowingUser="True"/>
+            <Button Text="Compartir Ubicacion" x:Name="btnCompartir"  BackgroundColor="#dc654d"  CornerRadius="20" TextColor=" White"   Grid.Column="0" Clicked="btnCompartir_Clicked"/>
+        </StackLayout>
+        
+    </ContentPage.Content>
+
+
+</ContentPage>

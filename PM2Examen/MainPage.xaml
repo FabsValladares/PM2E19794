@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2Examen.MainPage">
+
+
+
+    <StackLayout BackgroundColor="#ffffef">
+
+        <Frame BackgroundColor="#d04c37" Padding="20" CornerRadius="0">
+            <Label Text="SITE VISITOR APP" HorizontalTextAlignment="Center" TextColor="White" FontSize="25"/>
+        </Frame>
+
+        <Label Text="Imagen Sitio Visitado." FontSize="Title" Margin="0,0,0,0" TextColor="Black" HorizontalOptions="Center" />
+        <Image x:Name="Foto"  HeightRequest="200" WidthRequest="200" BackgroundColor="Azure" 
+               Margin="20,0,20,0" HorizontalOptions="Center" Source="imagen.jpg">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="AgregarImagen" NumberOfTapsRequired="1"/>
+            </Image.GestureRecognizers>
+            
+        </Image>
+
+        <Label Text="Latitud:" FontSize="Subtitle" Margin="20,5,10,5" TextColor="Black" FontAttributes="Bold"/>
+        <Entry x:Name="txtLatitud"  MaxLength="100" IsReadOnly="True"  Margin="15,0,15,5" BackgroundColor="white"  />
+
+        <Label Text="Longitud:" FontSize="Subtitle" Margin="20,5,10,5" TextColor="Black" FontAttributes="Bold"/>
+        <Entry x:Name="txtLongitud" MaxLength="100" IsReadOnly="True" Margin="15,0,15,5" BackgroundColor="white"  />
+
+        <Label Text="Descripción:" FontSize="Subtitle" Margin="20,0,0,0" TextColor="Black" FontAttributes="Bold"/>
+        <Editor x:Name="txtdescripcion" Placeholder="Ingrese una descripción " BackgroundColor="White"
+                Margin="20,5,20,5" FontSize="Subtitle"  HeightRequest="70" />
+
+        <RelativeLayout HorizontalOptions="CenterAndExpand" Margin="0">
+            <Grid>
+                <Button Text="Agregar" x:Name="btnagregar" BackgroundColor="#dc654d"  CornerRadius="20" TextColor="White"  WidthRequest="150" Grid.Column="0" Clicked="btnagregar_Clicked"/>
+                <Button Text="Listar Sitios" x:Name="btnlistar" BackgroundColor="#dc654d"  CornerRadius="20" TextColor="White" WidthRequest="150"  Grid.Column="1" Clicked="btnlistar_Clicked"/>
+                <Button Text="Salir App" x:Name="btnsalir" BackgroundColor="#dc654d"  CornerRadius="20" TextColor="White"  WidthRequest="150" HorizontalOptions="Center" Grid.Row="1" Grid.ColumnSpan="2" Clicked="btnsalir_Clicked"/>
+            </Grid>
+
+        </RelativeLayout>
+
+        
+
+
+
+
+        
+    </StackLayout>
+
+</ContentPage>
